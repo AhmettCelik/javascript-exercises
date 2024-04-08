@@ -1,4 +1,5 @@
 const findTheOldest = function(arrayOfPersons) {
+    //I didn't understand reduce method
     let arrayOfAges = arrayOfPersons.map((persons) => persons.yearOfDeath - persons.yearOfBirth);
     const indexOfLargestAge = arrayOfAges.reduce((maxIndex, currentValue, currentIndex, array) => currentValue > array[maxIndex] ? currentIndex : maxIndex, 0);
     return arrayOfPersons[indexOfLargestAge];
